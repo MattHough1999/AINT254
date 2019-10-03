@@ -14,9 +14,10 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.D)) player.velocity = new Vector3(20, 0, 0);
-        if (Input.GetKeyDown(KeyCode.A)) player.velocity = new Vector3(-20, 0, 0);
-        if (Input.GetKeyDown(KeyCode.W)) player.velocity = new Vector3(0, 0, 20);
-        if (Input.GetKeyDown(KeyCode.S)) player.velocity = new Vector3(0, 0, -20);
+
+        while (Input.GetKeyDown(KeyCode.A)) player.velocity = player.velocity + new Vector3(20, 0, 0);
+        while (Input.GetKeyDown(KeyCode.A)) player.velocity = player.velocity + new Vector3(-20, 0, 0);
+        while (Input.GetKeyDown(KeyCode.W)) player.velocity = player.velocity + new Vector3(0, 0, 20);
+        while (Input.GetKeyDown(KeyCode.S)) player.velocity = player.velocity + new Vector3(0, 0, -20);
     }
 }
