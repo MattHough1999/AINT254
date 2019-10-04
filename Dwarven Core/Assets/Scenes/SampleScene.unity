@@ -374,7 +374,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 7789281063037296252, guid: ae6c4748d57b4cd48a83c5a87a91e0e8, type: 3}
-  worldSize: 302
+  worldSize: 40
   worldHeight: 5
-  worldWidth: 5
+  worldWidth: 7
   startPosition: {x: 0, y: 1, z: 0}
