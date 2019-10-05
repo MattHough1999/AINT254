@@ -4,16 +4,11 @@ using UnityEngine;
 
 public class Collect : MonoBehaviour
 {
-    public GameObject player;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    // Start is called before the first frame update
+    private void OnTriggerEnter(Collider other)
     {
+        if (other.name != "Cube") { Debug.Log("Hit Detected!"); }
         
     }
 }
