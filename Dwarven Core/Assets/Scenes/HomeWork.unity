@@ -401,7 +401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1694dc2007e4fb34892d53a3136d8431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Spawn: {fileID: 0}
+  Spawn: {fileID: 661120361}
   Prefab: {fileID: 7789281063037296252, guid: ae6c4748d57b4cd48a83c5a87a91e0e8, type: 3}
 --- !u!1 &824852426 stripped
 GameObject:
