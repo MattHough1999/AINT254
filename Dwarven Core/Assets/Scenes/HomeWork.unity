@@ -153,7 +153,7 @@ SpringJoint:
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 1.4999986, z: 0}
   serializedVersion: 2
-  m_Spring: 10000
+  m_Spring: 3000
   m_Damper: 0.2
   m_MinDistance: 0
   m_MaxDistance: 0
@@ -189,7 +189,7 @@ BoxCollider:
   m_GameObject: {fileID: 119924264}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -286,7 +286,7 @@ SpringJoint:
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 1.4999998, z: 0}
   serializedVersion: 2
-  m_Spring: 10000
+  m_Spring: 3000
   m_Damper: 0.2
   m_MinDistance: 0
   m_MaxDistance: 0
@@ -322,7 +322,7 @@ BoxCollider:
   m_GameObject: {fileID: 136161414}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -565,7 +565,7 @@ SpringJoint:
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0.029999971, y: 0.6980001, z: 0.023000002}
   serializedVersion: 2
-  m_Spring: 10000
+  m_Spring: 3000
   m_Damper: 0.2
   m_MinDistance: 0
   m_MaxDistance: 0
@@ -601,7 +601,7 @@ BoxCollider:
   m_GameObject: {fileID: 583689085}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -698,7 +698,7 @@ SpringJoint:
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 1.4999992, z: 0}
   serializedVersion: 2
-  m_Spring: 10000
+  m_Spring: 3000
   m_Damper: 0.2
   m_MinDistance: 0
   m_MaxDistance: 0
@@ -734,7 +734,7 @@ BoxCollider:
   m_GameObject: {fileID: 641235475}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -972,7 +972,7 @@ SpringJoint:
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 1.4999998, z: 0}
   serializedVersion: 2
-  m_Spring: 10000
+  m_Spring: 3000
   m_Damper: 0.2
   m_MinDistance: 0
   m_MaxDistance: 0
@@ -1008,7 +1008,7 @@ BoxCollider:
   m_GameObject: {fileID: 872843991}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -1105,7 +1105,7 @@ SpringJoint:
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 1.4999998, z: 0}
   serializedVersion: 2
-  m_Spring: 10000
+  m_Spring: 3000
   m_Damper: 0.2
   m_MinDistance: 0
   m_MaxDistance: 0
@@ -1141,7 +1141,7 @@ BoxCollider:
   m_GameObject: {fileID: 972280657}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -1235,7 +1235,7 @@ BoxCollider:
   m_GameObject: {fileID: 1064276894}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -1311,7 +1311,7 @@ SpringJoint:
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 5.4999995, z: 0}
   serializedVersion: 2
-  m_Spring: 10000
+  m_Spring: 3000
   m_Damper: 0.2
   m_MinDistance: 0
   m_MaxDistance: 0
@@ -1371,7 +1371,7 @@ SpringJoint:
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 1.4999998, z: 0}
   serializedVersion: 2
-  m_Spring: 10000
+  m_Spring: 3000
   m_Damper: 0.2
   m_MinDistance: 0
   m_MaxDistance: 0
@@ -1407,7 +1407,7 @@ BoxCollider:
   m_GameObject: {fileID: 1166997417}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -1504,7 +1504,7 @@ SpringJoint:
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 1.4999998, z: 0}
   serializedVersion: 2
-  m_Spring: 10000
+  m_Spring: 3000
   m_Damper: 0.2
   m_MinDistance: 0
   m_MaxDistance: 0
@@ -1540,7 +1540,7 @@ BoxCollider:
   m_GameObject: {fileID: 1202608344}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -1721,7 +1721,7 @@ SpringJoint:
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 1.4999998, z: 0}
   serializedVersion: 2
-  m_Spring: 10000
+  m_Spring: 3000
   m_Damper: 0.2
   m_MinDistance: 0
   m_MaxDistance: 0
@@ -1757,7 +1757,7 @@ BoxCollider:
   m_GameObject: {fileID: 1563190172}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -1854,7 +1854,7 @@ SpringJoint:
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 1.4999998, z: 0}
   serializedVersion: 2
-  m_Spring: 10000
+  m_Spring: 3000
   m_Damper: 0.2
   m_MinDistance: 0
   m_MaxDistance: 0
@@ -1890,7 +1890,7 @@ BoxCollider:
   m_GameObject: {fileID: 1564688155}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -1987,7 +1987,7 @@ SpringJoint:
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 1.4999998, z: 0}
   serializedVersion: 2
-  m_Spring: 10000
+  m_Spring: 3000
   m_Damper: 0.2
   m_MinDistance: 0
   m_MaxDistance: 0
@@ -2023,7 +2023,7 @@ BoxCollider:
   m_GameObject: {fileID: 1592724690}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -2189,10 +2189,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: RigidBodyFPSController
       objectReference: {fileID: 0}
-    - target: {fileID: 100006, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.97
@@ -2236,14 +2232,6 @@ PrefabInstance:
     - target: {fileID: 400002, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.165
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
