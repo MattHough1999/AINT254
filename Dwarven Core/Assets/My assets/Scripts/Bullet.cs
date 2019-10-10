@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public Rigidbody rigidbody;
+    
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<Rigidbody>().AddForce(transform.forward * 20);
+
+        //GetComponent<Rigidbody>().AddForce(transform.forward * 2000);
+        //GetComponent<Rigidbody>().AddRelativeForce(transform.forward);
+        GetComponent<Rigidbody>().AddRelativeForce(Camera.main.transform.forward * 20000);
     }
 
     // Update is called once per frame
