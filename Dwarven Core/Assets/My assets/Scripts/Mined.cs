@@ -16,7 +16,7 @@ public class Mined : MonoBehaviour
 
         if (mined == true)
         {
-            //RaycastHit hit = null;
+            //Each ray is required to be declared independently 
             Ray ray1 = new Ray(transform.position, transform.forward);
             Ray ray2 = new Ray(transform.position, transform.forward * -1);
             Ray ray3 = new Ray(transform.position, transform.up);
@@ -24,13 +24,13 @@ public class Mined : MonoBehaviour
             Ray ray5 = new Ray(transform.position, transform.right);
             Ray ray6 = new Ray(transform.position, transform.right * -1);
             
+            //checkhit is run with each ray to reduce redundant code
             checkHit(ray1);
             checkHit(ray2);
             checkHit(ray3);
             checkHit(ray4);
             checkHit(ray5);
             checkHit(ray6);
-
         }
     }
     public void checkHit(Ray ray)
@@ -40,7 +40,11 @@ public class Mined : MonoBehaviour
         {
             var hitCube = hit.transform;
             var hitCubePhysics = hitCube.GetComponent<Rigidbody>();
-            if (hitCubePhysics != null) hitCubePhysics.isKinematic = false;
+            if (hitCubePhysics != null) 
+            { 
+                hitCubePhysics.isKinematic = false;
+                //hitCubePhysics.AddExplosionForce(2000f, transform.position, 10f);
+            }
             GetComponent<Rigidbody>().isKinematic = false;
         }
     }
