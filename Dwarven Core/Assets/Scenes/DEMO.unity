@@ -347,12 +347,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Step One: Approach a stack of cubes\nStep Two: Observe all the nothing\nStep
-    Three: Stand back\nStep Four: Change to your drill\nStep Five: See Step One\nStep
-    Six: Observe the awesome physics\nStep Seven: Leave contrsuctive feedback\n\nWhen
-    you're done press R to reload the scene.\n\nPs. \nplease don't include anything
-    about the player's movement or mouse look as they are for prototyping purposes
-    only"
+  m_Text: "Step Zero: Start OBS recording (for research)\nStep One: Approach a stack
+    of cubes\nStep Two: Observe all the nothing\nStep Three: Stand back\nStep Four:
+    Change to your drill\nStep Five: See Step One\nStep Six: Observe the awesome physics\nStep
+    Seven: Stop recording\nStep Seven: Leave contrsuctive feedback\n\nWhen you're
+    done press R to reload the scene.\n\nPs. \nplease don't include anything about
+    the player's movement or mouse look as they are for prototyping purposes only"
 --- !u!222 &760196980
 CanvasRenderer:
   m_ObjectHideFlags: 0
