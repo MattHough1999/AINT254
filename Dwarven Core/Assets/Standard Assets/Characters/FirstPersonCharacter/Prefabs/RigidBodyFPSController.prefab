@@ -325,6 +325,7 @@ GameObject:
   m_Component:
   - component: {fileID: 661120362}
   - component: {fileID: 661120363}
+  - component: {fileID: 1089451482}
   m_Layer: 0
   m_Name: SpawnPoint
   m_TagString: Untagged
@@ -360,6 +361,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Spawn: {fileID: 661120361}
   Prefab: {fileID: 2969970532518059976, guid: 8aad176214c09044a88c3920a1f61dfa, type: 3}
+--- !u!114 &1089451482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661120361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7f16487df7f3114d9249c0ef768e0dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collectText: {fileID: 0}
+  cubesCollected: 0
 --- !u!136 &824852430
 CapsuleCollider:
   m_ObjectHideFlags: 0
