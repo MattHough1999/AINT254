@@ -53,7 +53,7 @@ public class Mined : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision.gameObject.name);
+        //Debug.Log(collision.gameObject.name);
         var drill = collision.gameObject.GetComponentInChildren<Drill>();
         var hoover = collision.gameObject.GetComponentInChildren<Collect>();
 
@@ -61,6 +61,11 @@ public class Mined : MonoBehaviour
         {
             mined = true;
         }
+        //if (hoover != null && hoover.enabled == true)
+        //{
+        //    BroadcastMessage("collected");
+        //    mined = true;
+        //}
 
     }
 }
