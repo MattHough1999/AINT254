@@ -14,7 +14,7 @@ public class Mined : MonoBehaviour
     void Update()
     {
 
-        if (mined == true)
+        if (mined == true && GetComponent<Rigidbody>().isKinematic == true) //extra check prevents fallen cubes from sending raycasts
         {
             //Each ray is required to be declared independently 
             Ray ray1 = new Ray(transform.position, transform.forward);
@@ -32,6 +32,7 @@ public class Mined : MonoBehaviour
             checkHit(ray5);
             checkHit(ray6);
         }
+        
     }
     public void checkHit(Ray ray)
     {
@@ -43,13 +44,23 @@ public class Mined : MonoBehaviour
             if (hitCubePhysics != null) 
             { 
                 hitCubePhysics.isKinematic = false;
+                hitCube.GetComponent<Mined>().mined = true;
                 //hitCubePhysics.AddExplosionForce(2000f, transform.position, 10f);
             }
             GetComponent<Rigidbody>().isKinematic = false;
+            
         }
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name != "default") this.mined = true;
+        Debug.Log(collision.gameObject.name);
+        var drill = collision.gameObject.GetComponentInChildren<Drill>();
+        var hoover = collision.gameObject.GetComponentInChildren<Collect>();
+
+        if (drill != null && drill.enabled == true) 
+        {
+            mined = true;
+        }
+
     }
 }
