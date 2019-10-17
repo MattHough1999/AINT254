@@ -31,6 +31,8 @@ public class Mined : MonoBehaviour
             checkHit(ray4);
             checkHit(ray5);
             checkHit(ray6);
+            GetComponent<Rigidbody>().isKinematic = false;
+            this.gameObject.transform.localScale = new Vector3(0.98f, 0.98f, 0.98f);
         }
         
     }
@@ -45,9 +47,10 @@ public class Mined : MonoBehaviour
             { 
                 hitCubePhysics.isKinematic = false;
                 hitCube.GetComponent<Mined>().mined = true;
+                hitCube.localScale = new Vector3(0.98f, 0.98f, 0.98f);
                 //hitCubePhysics.AddExplosionForce(2000f, transform.position, 10f);
             }
-            GetComponent<Rigidbody>().isKinematic = false;
+            
             
         }
     }
