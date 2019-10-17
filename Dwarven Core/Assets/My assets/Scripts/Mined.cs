@@ -48,4 +48,8 @@ public class Mined : MonoBehaviour
             GetComponent<Rigidbody>().isKinematic = false;
         }
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.name != "default") this.mined = true;
+    }
 }
