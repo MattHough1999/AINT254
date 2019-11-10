@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Mined : MonoBehaviour
+public class Cube : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -46,7 +46,7 @@ public class Mined : MonoBehaviour
             if (hitCubePhysics != null) 
             { 
                 hitCubePhysics.isKinematic = false;
-                hitCube.GetComponent<Mined>().mined = true;
+                hitCube.GetComponent<Cube>().mined = true;
                 hitCube.localScale = new Vector3(0.98f, 0.98f, 0.98f);
                 //hitCubePhysics.AddExplosionForce(2000f, transform.position, 10f);
             }
