@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class MovementTarget : MonoBehaviour
 {
-    public float forwardSpeed = 0.1f;
-    public float ReverseSpeed = 0.1f;
-    public float RightSpeed = 0.1f;
-    public float LeftSpeed = 0.1f;
+    public float forwardSpeed = 1.1f;
+    public float ReverseSpeed = 1.1f;
+    public float RightSpeed = 1.1f;
+    public float LeftSpeed = 1.1f;
     
     // Start is called before the first frame update
     void Start()
