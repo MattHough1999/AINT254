@@ -5,11 +5,14 @@ using UnityEngine;
 public class Cube : MonoBehaviour
 {
     // Start is called before the first frame update
+    public bool mined = false;
+    public int type = 0;
+    public List<Material> types;
     void Start()
     {
-
+        choseType();
     }
-    public bool mined = false;
+    
     // Update is called once per frame
     void Update()
     {
@@ -35,6 +38,12 @@ public class Cube : MonoBehaviour
             this.gameObject.transform.localScale = new Vector3(0.98f, 0.98f, 0.98f);
         }
         
+    }
+    public void choseType() 
+    {
+        Material m = types[Random.Range(0, types.Count)];
+        GetComponent<Renderer>().material = m;
+
     }
     public void checkHit(Ray ray)
     {

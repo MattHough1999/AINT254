@@ -5,6 +5,7 @@ using UnityEngine;
 public class MakeBlocks : MonoBehaviour
 {
     // Start is called before the first frame update
+    
     public GameObject prefab;
     GameObject[] prefabs;
     public int worldDepth = 5;
@@ -29,6 +30,8 @@ public class MakeBlocks : MonoBehaviour
                 {
                     GameObject block = Instantiate(prefab);
                     block.transform.position = CurrPosition;
+                    
+                    
                     CurrPosition.z++;
                 }
                 CurrPosition.x++;
