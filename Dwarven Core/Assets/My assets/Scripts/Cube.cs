@@ -6,6 +6,7 @@ public class Cube : MonoBehaviour
 {
     // Start is called before the first frame update
     public bool mined = false;
+    public int health = 10;
     public int type = 0;
     public List<Material> types;
     void Start()
@@ -41,8 +42,11 @@ public class Cube : MonoBehaviour
     }
     public void choseType() 
     {
-        Material m = types[Random.Range(0, types.Count)];
+        type = Random.Range(0, types.Count);
+        Material m = types[type];
         GetComponent<Renderer>().material = m;
+        health = 10 * (type + 1);
+
 
     }
     public void checkHit(Ray ray)
@@ -73,11 +77,13 @@ public class Cube : MonoBehaviour
         {
             mined = true;
         }
-        //if (hoover != null && hoover.enabled == true)
-        //{
-        //    BroadcastMessage("collected");
-        //    mined = true;
-        //}
+        if (hoover != null && hoover.enabled == true)
+        {
+            if(health == 0) 
+            {
+                
+            }
+        }
 
     }
 }
