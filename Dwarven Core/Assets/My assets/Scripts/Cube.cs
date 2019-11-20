@@ -43,7 +43,7 @@ public class Cube : MonoBehaviour
         {
             var hitCube = hit.transform;
             var hitCubePhysics = hitCube.GetComponent<Rigidbody>();
-            if (hitCubePhysics != null) 
+            if (hitCubePhysics != null && hitCube.tag == "Cube") 
             { 
                 hitCubePhysics.isKinematic = false;
                 hitCube.GetComponent<Cube>().mined = true;
