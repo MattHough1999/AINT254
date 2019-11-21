@@ -137,7 +137,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mined: 0
-  Type: 83
+  health: 10
+  type: 0
+  player: {fileID: 0}
   types:
   - {fileID: 2100000, guid: b3570aea6ab4eec45b845e1345bb32d0, type: 2}
   - {fileID: 2100000, guid: 08fbe9289b316514ea193b7879c238e3, type: 2}

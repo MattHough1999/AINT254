@@ -7,7 +7,8 @@ public class MakeBlocks : MonoBehaviour
     // Start is called before the first frame update
     
     public GameObject prefab;
-    GameObject[] prefabs;
+    public GameObject wallPrefab;
+    
     public int worldDepth = 5;
     public int worldHeight = 5;
     public int worldWidth = 5;
@@ -16,12 +17,18 @@ public class MakeBlocks : MonoBehaviour
     private void Start()
     {
         SpawnBlocks();
+        
     }
     public void SpawnBlocks() 
     {
         Vector3 CurrPosition = startPosition;
-        prefabs = new GameObject[worldDepth];
-        
+
+        //GameObject wall1 = Instantiate(wallPrefab);
+        //wall1.transform.position = startPosition;
+        //wall1.transform.localScale = new Vector3(worldDepth + 1, worldHeight + 1, worldWidth + 1);
+
+
+
         for (int y = 0; y < worldHeight; y++)
         {
             for (int x = 0; x < worldDepth; x++)

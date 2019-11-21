@@ -15,12 +15,12 @@ public class Collect : MonoBehaviour
    
     private void FixedUpdate()
     {
-        collectText.text = "Cubes Collected: " + cubesCollected.ToString() ;
+        //collectText.text = "Cubes Collected: " + cubesCollected.ToString() ;
     }
     
-    public void collected() 
-    {
-        cubesCollected++;
+    //public void collected() 
+    //{
+    //    cubesCollected++;
 
-    }
+    //}
 }

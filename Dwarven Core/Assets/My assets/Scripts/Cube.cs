@@ -8,7 +8,9 @@ public class Cube : MonoBehaviour
     public bool mined = false;
     public int health = 10;
     public int type = 0;
+    
     public List<Material> types;
+    
     void Start()
     {
         choseType();
@@ -28,6 +30,7 @@ public class Cube : MonoBehaviour
             Ray ray5 = new Ray(transform.position, transform.right);
             Ray ray6 = new Ray(transform.position, transform.right * -1);
             
+            
             //checkhit is run with each ray to reduce redundant code
             checkHit(ray1);
             checkHit(ray2);
@@ -45,7 +48,7 @@ public class Cube : MonoBehaviour
         type = Random.Range(0, types.Count);
         Material m = types[type];
         GetComponent<Renderer>().material = m;
-        health = 10 * (type + 1);
+        health = 2 * (type + 1);
 
 
     }
@@ -76,14 +79,31 @@ public class Cube : MonoBehaviour
         if (drill != null && drill.enabled == true) 
         {
             mined = true;
+            if (health > 0)
+            {
+                health--;
+                transform.localScale = transform.localScale - new Vector3(0.03f / (type + 1), 0.03f / (type + 1), 0.03f / (type + 1));
+            }
+            
         }
         if (hoover != null && hoover.enabled == true)
         {
             if(health == 0) 
             {
-                
+                die();
             }
+
         }
 
+    }
+    public void die() 
+    {
+        GameObject player = GameObject.Find("RigidBodyFPSController");
+        //float f = type;
+        player.GetComponent<Inventory>().money = player.GetComponent<Inventory>().money + Mathf.Pow(10f, type);
+        Destroy(this.gameObject) ; 
+
+
+        
     }
 }
