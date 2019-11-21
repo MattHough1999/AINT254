@@ -9,21 +9,15 @@ public class LookAtPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<Text>().enabled = false;
-
+        //GetComponent<Text>().enabled = false;
+        //gameObject.GetComponentInChildren<Text>().enabled = true;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward * 6, Color.red);
-
         gameObject.transform.rotation = Camera.main.transform.rotation;
-        Ray player = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
-        RaycastHit hit;
-        if (Physics.Raycast(player, out hit))
-        {
-            GetComponentInChildren<Text>().enabled = true;
-        }
+        //gameObject.transform.position = gameObject.transform.up;
+        gameObject.GetComponentInChildren<Text>().enabled = false;
     }
 }

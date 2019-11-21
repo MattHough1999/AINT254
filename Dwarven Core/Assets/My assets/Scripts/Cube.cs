@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Cube : MonoBehaviour
 {
     // Start is called before the first frame update
     public bool mined = false;
     public int health = 10;
+    public int maxHealth = 10;
     public int type = 0;
     
     public List<Material> types;
@@ -42,7 +44,8 @@ public class Cube : MonoBehaviour
             GetComponent<Rigidbody>().isKinematic = false;
             this.gameObject.transform.localScale = new Vector3(0.98f, 0.98f, 0.98f);
         }
-        
+        GetComponentInChildren<Text>().text = health + "/" + maxHealth;
+
     }
     public void choseType() 
     {
@@ -50,6 +53,8 @@ public class Cube : MonoBehaviour
         Material m = types[type];
         GetComponent<Renderer>().material = m;
         health = 2 * (type + 1);
+        maxHealth = health;
+        
 
 
     }
@@ -83,7 +88,8 @@ public class Cube : MonoBehaviour
             if (health > 0)
             {
                 health--;
-                transform.localScale = transform.localScale - new Vector3(0.03f / (type + 1), 0.03f / (type + 1), 0.03f / (type + 1));
+                transform.localScale = transform.localScale - new Vector3(0.1f / (type + 1), 0.1f / (type + 1), 0.1f / (type + 1));
+
             }
             
         }
@@ -101,7 +107,7 @@ public class Cube : MonoBehaviour
     {
         GameObject player = GameObject.Find("RigidBodyFPSController");
         //float f = type;
-        player.GetComponent<Inventory>().money = player.GetComponent<Inventory>().money + Mathf.Pow(10f, type);
+        player.GetComponent<Inventory>().money = player.GetComponent<Inventory>().money + (type + 1) * 10;
         Destroy(this.gameObject) ; 
 
 

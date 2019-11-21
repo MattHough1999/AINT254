@@ -1,13 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WeaponSelect : MonoBehaviour
 {
     // Start is called before the first frame update
-    /// <summary>
-    /// GET RID OF ALL OF THIS CODE!!!! USE ONLY FOR THE DEMO!!!!!!!!!
-    /// </summary>
+    
     void Start()
     {
         transform.GetChild(0).gameObject.active = true;
@@ -21,10 +20,9 @@ public class WeaponSelect : MonoBehaviour
         {
             toggleWeapon();
         }
+        lookAt();
     }
-    /// <summary>
-    /// GET RID OF ALL OF THIS CODE!!!! USE ONLY FOR THE DEMO!!!!!!!!!
-    /// </summary>
+    
     void toggleWeapon() 
     {
         
@@ -43,9 +41,23 @@ public class WeaponSelect : MonoBehaviour
     }
     public void lookAt()
     {
-        
+        Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward * 3, Color.red);
+        Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
+        RaycastHit hit;
+        if(Physics.Raycast(ray, out hit, 3f))
+        {
+            var hitObject = hit.transform;
+            if (hitObject != null && hitObject.gameObject.tag == "Cube")
+            {
+                var hitObjectScript = hitObject.GetComponentInChildren<Canvas>().GetComponentInChildren<Text>();
+
+                //Debug.Log(hitObject.name);
+                //if (hitObjectScript != null && hitObject.gameObject.tag == "Cube")
+                //{
+                    hitObjectScript.enabled = true;
+                //}
+            }
+        }
     }
-    /// <summary>
-    /// GET RID OF ALL OF THIS CODE!!!! USE ONLY FOR THE DEMO!!!!!!!!!
-    /// </summary>
+    
 }
