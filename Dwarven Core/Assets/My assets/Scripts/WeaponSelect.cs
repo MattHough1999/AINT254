@@ -41,6 +41,10 @@ public class WeaponSelect : MonoBehaviour
         }
 
     }
+    public void lookAt()
+    {
+        
+    }
     /// <summary>
     /// GET RID OF ALL OF THIS CODE!!!! USE ONLY FOR THE DEMO!!!!!!!!!
     /// </summary>

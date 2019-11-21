@@ -10,7 +10,8 @@ public class Cube : MonoBehaviour
     public int type = 0;
     
     public List<Material> types;
-    
+    public List<Texture> textures;
+
     void Start()
     {
         choseType();
