@@ -17,7 +17,9 @@ public class LookAtPlayer : MonoBehaviour
     void FixedUpdate()
     {
         gameObject.transform.rotation = Camera.main.transform.rotation;
-        //gameObject.transform.position = gameObject.transform.up;
+        //gameObject.transform.Translate(Camera.main.transform.forward * 3);
+       
+        
         gameObject.GetComponentInChildren<Text>().enabled = false;
     }
 }
