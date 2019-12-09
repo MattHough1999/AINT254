@@ -16,5 +16,6 @@ public class Inventory : MonoBehaviour
     void Update()
     {
         GetComponentInChildren<Text>().text = "Gold: " + money;
+        PlayerPrefs.SetFloat("money", money);
     }
 }
