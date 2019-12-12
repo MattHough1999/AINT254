@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
+    public bool timed = true;
     [SerializeField] private Text countdownTimer = null;
     [SerializeField] private float startTime = 5.00f;
     private float currentTime;
@@ -24,15 +25,18 @@ public class GameController : MonoBehaviour
             PlayerPrefs.Save();
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
-        if(currentTime > 0.00f) 
+        if (timed == true)
         {
-            currentTime -= Time.deltaTime;
-            countdownTimer.text = currentTime.ToString("F");
-        }
-        else if(currentTime <= 0.00f) 
-        {
-            PlayerPrefs.Save();
-            SceneManager.LoadScene("endGame");
+            if (currentTime > 0.00f)
+            {
+                currentTime -= Time.deltaTime;
+                countdownTimer.text = currentTime.ToString("F");
+            }
+            else if (currentTime <= 0.00f)
+            {
+                PlayerPrefs.Save();
+                SceneManager.LoadScene("endGame");
+            }
         }
     }
     public void playGame() 
@@ -47,10 +51,20 @@ public class GameController : MonoBehaviour
         {
             menu.SetActive(false);
             options.SetActive(true);
-            
         }
         
     }
+    public void closeOptions()
+    {
+        GameObject menu = GameObject.Find("Menu");
+        GameObject options = GameObject.Find("Options");
+        if (menu != null && options != null)
+        {
+            options.SetActive(true);
+            menu.SetActive(false);
+        }
 
-    
+    }
+
+
 }
