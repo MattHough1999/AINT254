@@ -9,9 +9,10 @@ public class GameController : MonoBehaviour
 {
    
     public bool timed = true;
-    GameObject menu;
-    GameObject options;
-    GameObject exit;
+    
+    public GameObject menu;
+    public GameObject options;
+    public GameObject exit;
     [SerializeField] private Text countdownTimer = null;
     [SerializeField] private float startTime = 50.00f;
     private float currentTime;
@@ -19,14 +20,12 @@ public class GameController : MonoBehaviour
     void Start()
     {
         currentTime = startTime;
-        menu = GameObject.Find("Menu");
-        options = GameObject.Find("Options");
-        exit = GameObject.Find("Exit");
-        playGame();
+        resumeGame();
+        //playGame();
         //if (menu.activeInHierarchy == true) Debug.Log("found menu");
         //if (options.activeInHierarchy == true) Debug.Log("found options");
         //if (exit.activeInHierarchy == true) Debug.Log("found exit");
-
+        
     }
 
     // Update is called once per frame
@@ -57,11 +56,14 @@ public class GameController : MonoBehaviour
     }
     public void playGame() 
     {
-        if(SceneManager.GetActiveScene().name == "Menu") 
-        {
-            SceneManager.LoadScene("Game");
-        }
+         SceneManager.LoadScene("Game"); 
+    }
+    public void resumeGame()
+    {
+        
         menu.SetActive(false); options.SetActive(false); exit.SetActive(false);
+        if (SceneManager.GetActiveScene().name == "Menu") menu.SetActive(true);
+        if (SceneManager.GetActiveScene().name == "endGame") exit.SetActive(true);
         timed = true;
     }
     public void openOptions() 
@@ -87,7 +89,15 @@ public class GameController : MonoBehaviour
     
     public void exitGame() 
     {
-        Application.Quit();
+        if (SceneManager.GetActiveScene().name == "Menu")
+        {
+            Application.Quit();
+        }
+        else
+        {
+            SceneManager.LoadScene("Menu");
+        }
+        
     }
     public void escapePressed() 
     {
@@ -98,6 +108,7 @@ public class GameController : MonoBehaviour
         else if (menu.activeInHierarchy == false || options.activeInHierarchy == false || exit.activeInHierarchy == false)  
         {
             timed = false;
+            options.SetActive(false);
             menu.SetActive(true);
         }
         else 
@@ -105,6 +116,4 @@ public class GameController : MonoBehaviour
             playGame();
         }
     }
-
-
 }
