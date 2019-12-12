@@ -9,8 +9,8 @@ public class WeaponSelect : MonoBehaviour
     
     void Start()
     {
-        transform.GetChild(0).gameObject.active = true;
-        transform.GetChild(1).gameObject.active = false;
+        transform.GetChild(0).gameObject.SetActive(true);
+        transform.GetChild(1).gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -26,16 +26,16 @@ public class WeaponSelect : MonoBehaviour
     void toggleWeapon() 
     {
         
-        if (transform.GetChild(0).gameObject.active == false)
+        if (transform.GetChild(0).gameObject.activeInHierarchy == false)
         {
-            transform.GetChild(0).gameObject.active = true;
-            transform.GetChild(1).gameObject.active = false;
+            transform.GetChild(0).gameObject.SetActive(true);
+            transform.GetChild(1).gameObject.SetActive(false);
         }
 
         else
         {
-            transform.GetChild(1).gameObject.active = true;
-            transform.GetChild(0).gameObject.active = false;
+            transform.GetChild(0).gameObject.SetActive(false);
+            transform.GetChild(1).gameObject.SetActive(true);
         }
 
     }

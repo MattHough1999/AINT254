@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
-    [SerializeField] private Text countdownTimer;
+    [SerializeField] private Text countdownTimer = null;
     [SerializeField] private float startTime = 5.00f;
     private float currentTime;
     // Start is called before the first frame update
@@ -35,4 +35,22 @@ public class GameController : MonoBehaviour
             SceneManager.LoadScene("endGame");
         }
     }
+    public void playGame() 
+    {
+        SceneManager.LoadScene("Game");
+    }
+    public void openOptions() 
+    {
+        GameObject menu = GameObject.Find("Menu");
+        GameObject options = GameObject.Find("Options");
+        if (menu != null && options != null) 
+        {
+            menu.SetActive(false);
+            options.SetActive(true);
+            
+        }
+        
+    }
+
+    
 }
