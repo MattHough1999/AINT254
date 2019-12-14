@@ -27,26 +27,39 @@ public class MakeBlocks : MonoBehaviour
         //wall1.transform.position = startPosition;
         //wall1.transform.localScale = new Vector3(worldDepth + 1, worldHeight + 1, worldWidth + 1);
 
+        int x, y, z,wallThickness;
+        wallThickness = calcWall(worldWidth);
+        //calcWall(worldWidth);
 
-
-        for (int y = 0; y < worldHeight; y++)
-        {
-            for (int x = 0; x < worldDepth; x++)
+            for (y = 0; y < worldHeight; y++)
             {
-                for (int z = 0; z < worldWidth; z++)
+                for (x = 0; x < worldDepth; x++)
                 {
-                    GameObject block = Instantiate(prefab);
-                    block.transform.position = CurrPosition;
-                    
-                    
-                    CurrPosition.z++;
-                }
-                CurrPosition.x++;
-                CurrPosition.z = startPosition.z;
-            }
-            CurrPosition.x = startPosition.x;
-            CurrPosition.y++;
-        }
 
+                    for (z = 0; z < worldWidth; z++)
+                    {
+                    if (!(x > wallThickness - 1 && z > wallThickness - 1) || !(x < worldDepth - wallThickness && z < worldWidth - wallThickness)) // so proud of this if statement feel free to email me for an essay of explanation
+                        {
+                            GameObject block = Instantiate(prefab);
+                            block.transform.position = CurrPosition;
+                        }
+                        CurrPosition.z++;
+                    }
+
+                    CurrPosition.x++;
+                    CurrPosition.z = startPosition.z;
+                }
+                CurrPosition.x = startPosition.x;
+                CurrPosition.y++;
+            }
+        
+
+    }
+    public int calcWall(int width) 
+    {
+        int wallThick = width / 7;
+
+        Debug.Log(wallThick);
+        return wallThick;
     }
 }

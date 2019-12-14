@@ -17,6 +17,7 @@ public class Cube : MonoBehaviour
     void Start()
     {
         choseType();
+        transform.GetChild(0).gameObject.SetActive(false);
     }
     
     // Update is called once per frame

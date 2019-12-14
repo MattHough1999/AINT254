@@ -53,6 +53,11 @@ public class GameController : MonoBehaviour
         {
             escapePressed();
         }
+        if (menu.activeInHierarchy == true || options.activeInHierarchy == true || exit.activeInHierarchy == true)
+        {
+            Cursor.visible = true;
+        }
+        else if (menu.activeInHierarchy == false || options.activeInHierarchy == false || exit.activeInHierarchy == false) { Cursor.visible = false; }
     }
     public void playGame() 
     {
@@ -62,9 +67,11 @@ public class GameController : MonoBehaviour
     {
         
         menu.SetActive(false); options.SetActive(false); exit.SetActive(false);
+        
         if (SceneManager.GetActiveScene().name == "Menu") menu.SetActive(true);
-        if (SceneManager.GetActiveScene().name == "endGame") exit.SetActive(true);
-        timed = true;
+        else if (SceneManager.GetActiveScene().name == "endGame") exit.SetActive(true);
+        else { timed = true; }
+
     }
     public void openOptions() 
     {

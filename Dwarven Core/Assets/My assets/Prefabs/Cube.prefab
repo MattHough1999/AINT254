@@ -360,12 +360,12 @@ GameObject:
   - component: {fileID: 9120333074940283925}
   - component: {fileID: 5138221976916034832}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: CubeFace
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6729349052428160027
 Transform:
   m_ObjectHideFlags: 0

@@ -49,12 +49,14 @@ public class WeaponSelect : MonoBehaviour
             var hitObject = hit.transform;
             if (hitObject != null && hitObject.gameObject.tag == "Cube")
             {
-                var hitObjectScript = hitObject.GetComponentInChildren<Canvas>().GetComponentInChildren<Text>();
+                var hitObjectChild = hitObject.GetChild(0).gameObject;
+
+                if (hitObjectChild != null) hitObjectChild.SetActive(true) ;
 
                 //Debug.Log(hitObject.name);
                 //if (hitObjectScript != null && hitObject.gameObject.tag == "Cube")
                 //{
-                    hitObjectScript.enabled = true;
+                    
                 //}
             }
         }
