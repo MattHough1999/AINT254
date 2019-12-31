@@ -45,8 +45,13 @@ public class Cube : MonoBehaviour
             GetComponent<Rigidbody>().isKinematic = false;
             this.gameObject.transform.localScale = new Vector3(0.98f, 0.98f, 0.98f);
         }
-        GetComponentInChildren<Text>().text = health + "/" + maxHealth;
+        
+        transform.GetChild(0).GetComponentInChildren<Text>().text = health + "/" + maxHealth;
 
+    }
+    public void checkSupported(Cube cube) 
+    {
+        
     }
     public void choseType() 
     {

@@ -20,6 +20,6 @@ public class LookAtPlayer : MonoBehaviour
         //gameObject.transform.Translate(Camera.main.transform.forward * 3);
        
         
-        gameObject.GetComponentInChildren<Text>().enabled = false;
+        if(gameObject.GetComponentInChildren<Text>() != null)gameObject.GetComponentInChildren<Text>().enabled = false;
     }
 }

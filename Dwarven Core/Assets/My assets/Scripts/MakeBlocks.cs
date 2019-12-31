@@ -8,6 +8,7 @@ public class MakeBlocks : MonoBehaviour
     
     public GameObject prefab;
     public GameObject wallPrefab;
+    public GameObject enemy;
     
     public int worldDepth = 5;
     public int worldHeight = 5;
@@ -19,47 +20,53 @@ public class MakeBlocks : MonoBehaviour
         SpawnBlocks();
         
     }
-    public void SpawnBlocks() 
+
+    public void SpawnBlocks()
     {
         Vector3 CurrPosition = startPosition;
 
-        //GameObject wall1 = Instantiate(wallPrefab);
-        //wall1.transform.position = startPosition;
-        //wall1.transform.localScale = new Vector3(worldDepth + 1, worldHeight + 1, worldWidth + 1);
+        int x, y, z, wallThickness, spawnEnemy;
 
-        int x, y, z,wallThickness;
         wallThickness = calcWall(worldWidth);
-        //calcWall(worldWidth);
 
-            for (y = 0; y < worldHeight; y++)
+        for (y = 0; y < worldHeight; y++)
+        {
+            for (x = 0; x < worldDepth; x++)
             {
-                for (x = 0; x < worldDepth; x++)
+                for (z = 0; z < worldWidth; z++)
                 {
-
-                    for (z = 0; z < worldWidth; z++)
-                    {
                     if (!(x > wallThickness - 1 && z > wallThickness - 1) || !(x < worldDepth - wallThickness && z < worldWidth - wallThickness)) // so proud of this if statement feel free to email me for an essay of explanation
+                    {
+                        GameObject block = Instantiate(prefab);
+                        block.transform.position = CurrPosition;
+                        spawnEnemy = new System.Random().Next(0, 5);
+                        if (spawnEnemy == 1) 
                         {
-                            GameObject block = Instantiate(prefab);
-                            block.transform.position = CurrPosition;
+                            GameObject Denemy = Instantiate(enemy);
+                            Denemy.transform.position = CurrPosition + new Vector3(0, 5, 0);
                         }
-                        CurrPosition.z++;
                     }
-
-                    CurrPosition.x++;
-                    CurrPosition.z = startPosition.z;
+                    CurrPosition.z++;
                 }
-                CurrPosition.x = startPosition.x;
-                CurrPosition.y++;
+
+                CurrPosition.x++;
+                CurrPosition.z = startPosition.z;
             }
+            CurrPosition.x = startPosition.x;
+            CurrPosition.y++;
+        }
+        
         
 
     }
+
     public int calcWall(int width) 
     {
         int wallThick = width / 7;
 
-        Debug.Log(wallThick);
+        if (wallThick == 0) return 1;
+
+        //Debug.Log(wallThick);
         return wallThick;
     }
 }

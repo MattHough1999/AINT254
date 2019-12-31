@@ -53,11 +53,6 @@ public class WeaponSelect : MonoBehaviour
 
                 if (hitObjectChild != null) hitObjectChild.SetActive(true) ;
 
-                //Debug.Log(hitObject.name);
-                //if (hitObjectScript != null && hitObject.gameObject.tag == "Cube")
-                //{
-                    
-                //}
             }
         }
     }

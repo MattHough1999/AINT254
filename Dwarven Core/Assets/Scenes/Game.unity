@@ -229,9 +229,10 @@ MonoBehaviour:
   prefab: {fileID: 7081266087144386856, guid: ae6c4748d57b4cd48a83c5a87a91e0e8, type: 3}
   wallPrefab: {fileID: 7118120553009695068, guid: 9cef2879179fcfa4d8df2bc9ccd4b0c7,
     type: 3}
-  worldDepth: 20
-  worldHeight: 5
-  worldWidth: 20
+  enemy: {fileID: 8098374792278551292, guid: 685234f23552f064f8fb82bf0c4ab0ee, type: 3}
+  worldDepth: 21
+  worldHeight: 2
+  worldWidth: 21
   startPosition: {x: 0, y: 1, z: 0}
 --- !u!114 &16383258
 MonoBehaviour:
@@ -2302,7 +2303,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.34
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: m_LocalRotation.x
