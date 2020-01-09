@@ -76,7 +76,7 @@ public class Cube : MonoBehaviour
                 hitCubePhysics.isKinematic = false;
                 hitCube.GetComponent<Cube>().mined = true;
                 hitCube.localScale = new Vector3(0.98f, 0.98f, 0.98f);
-                //hitCubePhysics.AddExplosionForce(2000f, transform.position, 10f);
+                
             }
             
             
@@ -84,7 +84,7 @@ public class Cube : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        //Debug.Log(collision.gameObject.name);
+        
         var drill = collision.gameObject.GetComponentInChildren<Drill>();
         var hoover = collision.gameObject.GetComponentInChildren<Collect>();
 
@@ -112,7 +112,7 @@ public class Cube : MonoBehaviour
     public void die() 
     {
         GameObject player = GameObject.Find("RigidBodyFPSController");
-        //float f = type;
+        
         player.GetComponent<Inventory>().money = player.GetComponent<Inventory>().money + (type + 1) * 10;
         Destroy(this.gameObject) ; 
 

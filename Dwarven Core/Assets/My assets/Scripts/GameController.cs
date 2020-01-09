@@ -21,10 +21,6 @@ public class GameController : MonoBehaviour
     {
         currentTime = startTime;
         resumeGame();
-        //playGame();
-        //if (menu.activeInHierarchy == true) Debug.Log("found menu");
-        //if (options.activeInHierarchy == true) Debug.Log("found options");
-        //if (exit.activeInHierarchy == true) Debug.Log("found exit");
         
     }
 

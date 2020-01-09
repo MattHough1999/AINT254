@@ -35,7 +35,7 @@ public class MakeBlocks : MonoBehaviour
             {
                 for (z = 0; z < worldWidth; z++)
                 {
-                    if (!(x > wallThickness - 1 && z > wallThickness - 1) || !(x < worldDepth - wallThickness && z < worldWidth - wallThickness)) // so proud of this if statement feel free to email me for an essay of explanation
+                    if (!(x > wallThickness - 1 && z > wallThickness - 1) || !(x < worldDepth - wallThickness && z < worldWidth - wallThickness))
                     {
                         GameObject block = Instantiate(prefab);
                         block.transform.position = CurrPosition;
@@ -66,7 +66,7 @@ public class MakeBlocks : MonoBehaviour
 
         if (wallThick == 0) return 1;
 
-        //Debug.Log(wallThick);
+       
         return wallThick;
     }
 }
