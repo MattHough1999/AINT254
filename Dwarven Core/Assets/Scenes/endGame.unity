@@ -660,7 +660,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1121315778}
         m_MethodName: exitGame
         m_Mode: 1
         m_Arguments:
@@ -1506,6 +1506,7 @@ MonoBehaviour:
   prefab: {fileID: 808524064331792286, guid: 5c29d57bb7e818d4bb17b813bb128c7e, type: 3}
   wallPrefab: {fileID: 7118120553009695068, guid: 9cef2879179fcfa4d8df2bc9ccd4b0c7,
     type: 3}
+  enemy: {fileID: 808524064331792286, guid: 5c29d57bb7e818d4bb17b813bb128c7e, type: 3}
   worldDepth: 1
   worldHeight: 40
   worldWidth: 40
@@ -1665,8 +1666,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: closeOptions
+      - m_Target: {fileID: 1121315778}
+        m_MethodName: playGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2182,7 +2183,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1843699699
 RectTransform:
   m_ObjectHideFlags: 0

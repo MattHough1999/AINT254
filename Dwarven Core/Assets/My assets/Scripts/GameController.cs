@@ -123,4 +123,8 @@ public class GameController : MonoBehaviour
             playGame();
         }
     }
+    public void loadTut() 
+    {
+        SceneManager.LoadScene("Tutorial");
+    }
 }
